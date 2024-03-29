@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Cache-Control" content="private, no-store"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Blocky Animal</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body onload="main()">
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix-cse160.js"></script>
+    <script src="Cube.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Cone.js"></script>
+    <script src ="HTMLFuncs.js"></script>
+    <script src="BlockyAnimal.js"></script>
+
+    <canvas id="webgl" width="600" height="600">
+      Please use a browser that supports "canvas"
+    </canvas>
+
+    <div class="cell">
+      <h1>Camera</h1>
+      <label for="xAngle">X Angle:</label>
+      <input type="range" id="xAngle" name="xAngle"
+        min="-180" max="180" value = "0" step = "1">
+      <br>
+      <label for="yAngle">Y Angle:</label>
+      <input type="range" id="yAngle" name="yAngle"
+        min="-180" max="180" value = "0" step = "1">
+      <h1>Body Controls</h1>
+      <label for="frontBodyPos">Front body z-position:</label>
+      <input type="range" id="frontBodyPos" name="frontBodyPos"
+        min="-1" max="1" value = "0" step = "0.01">
+      <br>
+      <label for="frontBodyRot">Front body rotation:</label>
+      <input type="range" id="frontBodyRot" name="frontBodyRot"
+        min="-20" max="20" value = "0" step = "0.1">
+      <br>
+      <label for="backBodyRot">Back body rotation:</label>
+      <input type="range" id="backBodyRot" name="backBodyRot"
+        min="-20" max="20" value = "0" step = "0.1">
+      <br>
+      <label for="tailRotAng">Tail rotation (up/down):</label>
+      <input type="range" id="tailRotAng" name="tailRotAng"
+        min="-20" max="20" value = "0" step = "0.1">
+      <h1>Head/Eye Controls:</h1>
+      <label for="neckRotAng">Neck rotation:</label>
+      <input type="range" id="neckRotAng" name="neckRotAng"
+        min="-20" max="20" value = "0" step = "0.1">
+      <br>
+      <label for="eyesRotAng">Eyes Rotation Angle:</label>
+      <input type="range" id="eyesRotAng" name="eyesRotAng"
+        min="-5" max="5" value = "0" step = "0.1">
+      <br>
+      <label for="eyeScaleVal">Extend/retract eyes:</label>
+      <input type="range" id="eyeScaleVal" name="eyeScaleVal"
+        min="0.01" max="1" value = "1" step = "0.01">
+    </div>
+    
+    <p id = "perfCounter"></p>
+    <p id = "fpsCounter"></p>
+    <p>
+      <label>Target Framerate:</label>
+      <input type="button" id="fpsButton10" value="10"></input>
+      <input type="button" id="fpsButton24" value="24"></input>
+      <input type="button" id="fpsButton60" value="60"></input>
+      <input type="button" id="fpsButton120" value="120"></input>
+      <input type="button" id="fpsButton165" value="165"></input>
+    </p>
+
+    <p>
+      <label for="animOn">Animation:</label>
+      <input type="button" id="animOnButton" value="Yes"></input>
+      <input type="button" id="animOffButton" value="No"></input>
+    </p>
+
+    <p>
+      Hold Shift + Click with the animation on to make the antennae retract!
+      <br>
+      Turn off the animation to use the non-camera sliders.
+    </p>
+
+
+  </body>
+</html>

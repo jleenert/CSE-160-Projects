@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Paint Program</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="500" height="500">
+      Please use a browser that supports "canvas"
+    </canvas>
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="Asg1.js"></script>
+    <script src="Point.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Circle.js"></script>
+    
+    <p id = "numdot"></p>
+
+    <p>
+      <input type="button" id="clearButton" value="Clear Canvas" onclick=tryClear()></input>
+      <input type="button" id="undoButton" value="Undo Last Shape" onclick=undoLastShape()></input>
+    </p>
+
+    <p>
+      <button type ="button" id = "pointButton">Point</button>
+      <button type ="button" id = "triangleButton">Triangle</button>
+      <button type ="button" id = "circleButton">Circle</button>
+      <button type ="button" id = "trailButton">Rainbow Trail (drag your mouse)</button>
+    </p>
+
+    <p>
+      <label for="red">Red:</label>
+      <input type="range" id="red" name="red"
+        min="0" max="1" value = "1" step = "0.02">
+      <label for="blue">Green:</label>
+      <input type="range" id="green" name="green"
+        min="0" max="1" value = "1" step = "0.02">
+      <label for="blue">Blue:</label>
+      <input type="range" id="blue" name="blue"
+        min="0" max="1" value = "1" step = "0.02">
+    </p>
+      <label for="size">Shape Size:</label>
+      <input type="range" id="size" name="size"
+        min="5" max="80" value = "5">
+      <label for="segments">(Circles) Segment Count:</label>
+      <input type="range" id="segments" name="segments"
+        min="4" max="50" value = "5">
+    <p>
+      <button type ="button" id = "spamButton" onclick=drawSpamton()>Draw Spamton! (Free Kromer)</button>
+      <button type ="button" id = "drawingButton" onclick="window.open('spamton_drawing.jpg')">Original Drawing</button>
+    </p>
+    <p>
+      <a>Extra Awesomeness: Added an undo button and rainbow draw function.</a>
+    </p>
+  </body>
+</html>

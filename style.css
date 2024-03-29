@@ -1,0 +1,11 @@
+body { text-align: center; }
+p    { font-size: 2em; }
+img  { width: 600px; }
+
+#asg0 {
+    font-size:40;
+}
+
+.my-class {
+    width: 200px;
+}

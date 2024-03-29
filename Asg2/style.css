@@ -1,0 +1,11 @@
+.cell {
+     display: inline-block;
+     border: 3px outset black;
+     background-color: chartreuse;
+     vertical-align: top;
+     text-align: center;
+     width: 22rem;
+     line-height: 1.2;
+     padding-top: 0;
+     padding-bottom: 0.7rem;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta http-equiv="Cache-Control" content="private, no-store"/>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+          <meta charset="utf-8">
+          <title>3D World</title>
+          <link rel="stylesheet" type="text/css" href="style.css">
+     </head>
+     <body onload="main()">
+          <!--class libraries to be loaded-->
+          <script src="../lib/webgl-utils.js"></script>
+          <script src="../lib/webgl-debug.js"></script>
+          <script src="../lib/cuon-utils.js"></script>
+          <script src="../lib/cuon-matrix-cse160.js"></script>
+          <!--setup scripts-->
+          <script src="HTMLFuncs.js"></script>
+          <script src="Camera.js"></script>
+          <script src="RenderFuncs.js"></script>
+          <script src="3DWorld.js"></script>
+          <script src="Cube.js"></script>
+          <!--slug code-->
+          <script src="SlugCube.js"></script>
+          <script src="SlugCode.js"></script>
+
+          <canvas id="webgl" width="900" height="700">
+               Please use a browser that supports "canvas"
+          </canvas>
+
+          <div class="cell">
+               <p id = "instructions"></p>
+          </div>
+
+          <div class="cell">
+               <p>
+                    Keyboard controls: WASD/Arrow Keys to move cardinal directions. Z/C move up and down.
+                    <br>
+                    Q/E pan the camera left and right, and R/F pan it up and down.
+                    <br>
+                    Mouse controls: Hold left click and drag around canvas to move camera.
+                    <br>
+                    Middle click to place a block, right click to delete a block.
+               </p>
+               <label for="fovSlider">FOV Slider:</label>
+               <input type="range" id="fovSlider" name="fovSlider"
+                    min="30" max="110" value = "60" step = "1">
+          </div>
+
+          <p id = "perfCounter"></p>
+
+          
+     </body>
+</html>
